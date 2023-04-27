@@ -87,29 +87,6 @@ struct node *deleteNode(struct node *root, int key)
   return root;
 }
 
-bool searchKey(node *root, int key)
-{
-  if (root == NULL)
-  {
-    return false;
-  }
-  else if (root->key == key)
-  {
-    return true;
-  }
-  else
-  {
-    if (root->key < key)
-    {
-      return searchKey(root->right, key);
-    }
-    else
-    {
-      return searchKey(root->left, key);
-    }
-  }
-}
-
 int successor(node *root)
 {
   root = root->right;
